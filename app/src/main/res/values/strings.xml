@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">الحلقات</string>
+    <string name="addNewHalaqa">إضافة حلقة جديدة</string>
+    <string name="halaqa_name">إسم الحلقة</string>
+    <string name="saturday_arabic">السبت</string>
+    <string name="sunday_arabic">الأحد</string>
+    <string name="am_vs_pm">ص</string>
+    <string name="double_zeros">٠٠</string>
+    <string name="one_space" />
+    <string name="space_colon_space">:</string>
+    <string name="pick_date">أو حدد وقت
+    </string>
+    <string name="write_halaqa_name">أكتب إسم الحلقة</string>
+    <string name="monday_arabic">الإثنين</string>
+    <string name="tuesday_arabic">الثلاثاء</string>
+    <string name="wednesday_arabic">الأربعاء</string>
+    <string name="thursday_arabic">الخميس</string>
+    <string name="friday_arabic">الجمعة</string>
+    <string name="add_new">إضافة عنصر جديد</string>
+</resources>

@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".AddingHalaqaActivity"
+    android:layoutDirection="rtl">
+
+    <EditText
+        android:id="@+id/write_halaqa_name_edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="7dp"
+        android:ems="10"
+        android:hint="@string/write_halaqa_name"
+        android:inputType="text"
+        android:singleLine="true"
+        android:importantForAutofill="no"/>
+
+    <LinearLayout
+        android:id="@+id/dates_picker_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!--Saturday-->
+        <LinearLayout
+            android:id="@+id/saturday_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:orientation="vertical"
+            tools:ignore="UselessParent">
+
+            <CheckBox
+                android:id="@+id/saturday_checkbox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="dayPicked"
+                android:text="@string/saturday_arabic" />
+
+            <LinearLayout
+                android:id="@+id/saturday_time_write_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/saturday_time_write_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:textDirection="rtl" />
+
+                <Button
+                    android:id="@+id/saturday_time_picker"
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:text="@string/pick_date" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <!--Sunday-->
+        <LinearLayout
+            android:id="@+id/sunday_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:orientation="vertical"
+            tools:ignore="UselessParent">
+
+            <CheckBox
+                android:id="@+id/sunday_checkbox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="dayPicked"
+                android:text="@string/sunday_arabic" />
+
+            <LinearLayout
+                android:id="@+id/sunday_time_write_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/sunday_time_write_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:textDirection="rtl" />
+
+                <Button
+                    android:id="@+id/sunday_time_picker"
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:text="@string/pick_date" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <!--Monday-->
+        <LinearLayout
+            android:id="@+id/monday_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:orientation="vertical"
+            tools:ignore="UselessParent">
+
+            <CheckBox
+                android:id="@+id/monday_checkbox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="dayPicked"
+                android:text="@string/monday_arabic" />
+
+            <LinearLayout
+                android:id="@+id/monday_time_write_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/monday_time_write_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:textDirection="rtl" />
+
+                <Button
+                    android:id="@+id/monday_time_picker"
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:text="@string/pick_date" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <!--Tuesday-->
+        <LinearLayout
+            android:id="@+id/tuesday_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:orientation="vertical"
+            tools:ignore="UselessParent">
+
+            <CheckBox
+                android:id="@+id/tuesday_checkbox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="dayPicked"
+                android:text="@string/tuesday_arabic" />
+
+            <LinearLayout
+                android:id="@+id/tuesday_time_write_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/tuesday_time_write_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:textDirection="rtl" />
+
+                <Button
+                    android:id="@+id/tuesday_time_picker"
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:text="@string/pick_date" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <!--Wednesday-->
+        <LinearLayout
+            android:id="@+id/wednesday_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:orientation="vertical"
+            tools:ignore="UselessParent">
+
+            <CheckBox
+                android:id="@+id/wednesday_checkbox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="dayPicked"
+                android:text="@string/wednesday_arabic" />
+
+            <LinearLayout
+                android:id="@+id/wednesday_time_write_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/wednesday_time_write_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:textDirection="rtl" />
+
+                <Button
+                    android:id="@+id/wednesday_time_picker"
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:text="@string/pick_date" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <!--Thursday-->
+        <LinearLayout
+            android:id="@+id/thursday_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:orientation="vertical"
+            tools:ignore="UselessParent">
+
+            <CheckBox
+                android:id="@+id/thursday_checkbox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="dayPicked"
+                android:text="@string/thursday_arabic" />
+
+            <LinearLayout
+                android:id="@+id/thursday_time_write_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/thursday_time_write_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:textDirection="rtl" />
+
+                <Button
+                    android:id="@+id/thursday_time_picker"
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:text="@string/pick_date" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <!--Friday-->
+        <LinearLayout
+            android:id="@+id/friday_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:orientation="vertical"
+            tools:ignore="UselessParent">
+
+            <CheckBox
+                android:id="@+id/friday_checkbox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="dayPicked"
+                android:text="@string/friday_arabic" />
+
+            <LinearLayout
+                android:id="@+id/friday_time_write_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/friday_time_write_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:textDirection="rtl" />
+
+                <Button
+                    android:id="@+id/friday_time_picker"
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:text="@string/pick_date" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
