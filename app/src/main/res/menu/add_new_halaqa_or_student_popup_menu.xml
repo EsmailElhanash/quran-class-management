@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/addStudent"
+        android:icon="@drawable/ic_student_add"
+        android:title="@string/add_student" />
+    <item
+        android:id="@+id/addHalaqa"
+        android:icon="@drawable/ic_halaqa_add"
+        android:title="@string/add_halaqa" />
+</menu>

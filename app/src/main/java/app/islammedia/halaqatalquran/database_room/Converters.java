@@ -1,4 +1,4 @@
-package com.example.halaqatalquran.database_room;
+package app.islammedia.halaqatalquran.database_room;
 
 import androidx.room.TypeConverter;
 

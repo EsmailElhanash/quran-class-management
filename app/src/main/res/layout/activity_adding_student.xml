@@ -5,47 +5,44 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".AddingHalaqaActivity"
-    android:layoutDirection="rtl">
+    tools:context=".AddingStudentActivity">
 
     <EditText
-        android:id="@+id/halaqaName"
+        android:id="@+id/studentName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="7dp"
+        android:autofillHints="@string/studentName"
         android:ems="10"
-        android:hint="@string/write_halaqa_name"
-        android:inputType="text"
-        android:singleLine="true"
-        android:importantForAutofill="no"/>
+        android:hint="@string/studentName"
+        android:inputType="textPersonName"
+        android:singleLine="true" />
 
     <EditText
-        android:id="@+id/halaqaTime"
+        android:id="@+id/studentInfo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="7dp"
+        android:autofillHints="@string/studentInfo"
         android:ems="10"
-        android:hint="@string/halaqaTimes"
-        android:inputType="textMultiLine"
-        android:importantForAutofill="no"/>
-
+        android:hint="@string/studentInfo"
+        android:inputType="textMultiLine" />
 
     <EditText
-        android:id="@+id/halaqaInfo"
+        android:id="@+id/studentHWS"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="7dp"
+        android:autofillHints="@string/studentHWS"
         android:ems="10"
-        android:hint="@string/moreInfo"
-        android:inputType="textMultiLine"
-
-        android:importantForAutofill="no"/>
+        android:hint="@string/studentHWS"
+        android:inputType="textMultiLine" />
 
     <Button
-        android:id="@+id/saveButton"
+        android:id="@+id/saveButton2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:text="@string/save" />
-
+        android:text="@string/save"
+        android:theme="@android:style/Animation" />
 </LinearLayout>

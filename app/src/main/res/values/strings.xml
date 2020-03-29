@@ -17,4 +17,18 @@
     <string name="thursday_arabic">الخميس</string>
     <string name="friday_arabic">الجمعة</string>
     <string name="add_new">إضافة عنصر جديد</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="halaqa_repeats">رقم</string>
+    <string name="halaqaTimes">مواعيد الحلقة</string>
+    <string name="moreInfo">معلومات اضافية</string>
+    <string name="save">حفظ</string>
+    <string name="namePlease">يرجى ادخال اسم الحلقة</string>
+    <string name="add_student">إضافة طالب</string>
+    <string name="add_halaqa">إضافة حلقة</string>
+    <string name="studentName">إسم الطالب</string>
+    <string name="studentInfo">معلومات إضافية عن الطالب</string>
+    <string name="studentHWS">الواجبات الحالية للطالب</string>
+    <string name="stNamePlease">يرجى إدخال إسم الطالب</string>
 </resources>
