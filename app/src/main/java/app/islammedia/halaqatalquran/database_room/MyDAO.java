@@ -15,4 +15,10 @@ public interface MyDAO {
     @Insert
     void insertStudent(Student... ss);
 
+    @Query("SELECT * FROM Student")
+    List<Student> getAllStudents();
+
+    @Query("SELECT * FROM Halaqa")
+    List<Halaqa> getHalaqat();
+
 }

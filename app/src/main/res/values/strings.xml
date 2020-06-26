@@ -25,10 +25,10 @@
     <string name="moreInfo">معلومات اضافية</string>
     <string name="save">حفظ</string>
     <string name="namePlease">يرجى ادخال اسم الحلقة</string>
-    <string name="add_student">إضافة طالب</string>
+    <string name="add_student">إضافة حافظ</string>
     <string name="add_halaqa">إضافة حلقة</string>
-    <string name="studentName">إسم الطالب</string>
-    <string name="studentInfo">معلومات إضافية عن الطالب</string>
-    <string name="studentHWS">الواجبات الحالية للطالب</string>
-    <string name="stNamePlease">يرجى إدخال إسم الطالب</string>
+    <string name="studentName">الإسم</string>
+    <string name="studentInfo">معلومات إضافية</string>
+    <string name="studentHWS">الواجبات الحالية</string>
+    <string name="stNamePlease">يرجى إدخال إسم الحافظ</string>
 </resources>

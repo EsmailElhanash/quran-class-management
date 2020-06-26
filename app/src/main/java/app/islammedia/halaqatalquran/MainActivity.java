@@ -6,9 +6,14 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.PopupMenu;
 import androidx.appcompat.widget.Toolbar;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentActivity;
+import androidx.viewpager2.adapter.FragmentStateAdapter;
+import androidx.viewpager2.widget.ViewPager2;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -31,6 +36,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         setUpToolbar();
+
+        ViewPager2 vp2 = findViewById(R.id.st_hq_vp2);
+        vp2.setAdapter(new ViewPager2Slider(this));
+
     }
 
     public void addNew_(View clickedButton){
@@ -57,4 +66,27 @@ public class MainActivity extends AppCompatActivity {
             getSupportActionBar().setDisplayShowTitleEnabled(false);
         }
     }
+
+    private static class ViewPager2Slider extends FragmentStateAdapter {
+        ViewPager2Slider(FragmentActivity fa) {
+            super(fa);
+        }
+
+        @NonNull
+        @Override
+        public Fragment createFragment(int position) {
+
+            if (position == 1) {
+                return new StudentsViewFragment();
+            }
+            return new HalaqatViewFragment();
+        }
+
+        @Override
+        public int getItemCount() {
+            return NUM_PAGES;
+        }
+    }
+
+    public static final int NUM_PAGES = 2;
 }

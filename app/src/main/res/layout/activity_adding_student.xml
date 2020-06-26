@@ -5,7 +5,18 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:layoutDirection="rtl"
     tools:context=".AddingStudentActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        app:titleTextColor="@android:color/white"
+        app:title="@string/add_student"
+        android:id="@+id/addStToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/holo_blue_light"
+        android:minHeight="?attr/actionBarSize"
+        />
 
     <EditText
         android:id="@+id/studentName"
