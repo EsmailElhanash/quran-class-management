@@ -15,6 +15,14 @@ import androidx.fragment.app.FragmentActivity;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
 import androidx.viewpager2.widget.ViewPager2;
 
+import com.google.android.material.tabs.TabLayout;
+import com.google.android.material.tabs.TabLayoutMediator;
+
+import app.islammedia.halaqatalquran.StHq_ViewEditAdd.HalaqaActivity;
+import app.islammedia.halaqatalquran.StHq_ViewEditAdd.StudentActivity;
+import app.islammedia.halaqatalquran.MainVP2Fragments.HalaqatViewFragment;
+import app.islammedia.halaqatalquran.MainVP2Fragments.StudentsViewFragment;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -24,11 +32,13 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void addHalaqa() {
-        startActivity(new Intent(getApplicationContext(),AddingHalaqaActivity.class));
+        startActivity(new Intent(getApplicationContext(), HalaqaActivity.class));
     }
 
     public void addStudent() {
-        startActivity(new Intent(getApplicationContext(),AddingStudentActivity.class));
+        Intent stIntent = new Intent(getApplicationContext(), StudentActivity.class);
+        stIntent.putExtra("MODE",1);
+        startActivity(stIntent);
     }
 
     @Override
@@ -38,7 +48,13 @@ public class MainActivity extends AppCompatActivity {
         setUpToolbar();
 
         ViewPager2 vp2 = findViewById(R.id.st_hq_vp2);
+        TabLayout vp2_tabs = findViewById(R.id.vp2_tabs);
         vp2.setAdapter(new ViewPager2Slider(this));
+
+        new TabLayoutMediator(vp2_tabs, vp2,
+                (tab, position) -> tab.setText(position==0 ? "الحلقات" : "الحُفَّاظ")
+        ).attach();
+
 
     }
 
@@ -71,6 +87,8 @@ public class MainActivity extends AppCompatActivity {
         ViewPager2Slider(FragmentActivity fa) {
             super(fa);
         }
+
+
 
         @NonNull
         @Override

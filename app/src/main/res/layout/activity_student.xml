@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".StHq_ViewEditAdd.StudentActivity"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent">
+
+    <FrameLayout
+        android:layoutDirection="rtl"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent">
+
+        <ProgressBar
+            android:id="@+id/st_add_progress_bar"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/addStToolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/holo_blue_light"
+                android:minHeight="?attr/actionBarSize"
+                android:theme="@style/toolbar_style"
+                app:titleTextColor="@android:color/white" />
+
+            <EditText
+                android:id="@+id/studentName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="7dp"
+                android:autofillHints="@string/studentName"
+                android:ems="10"
+
+                android:hint="@string/studentName"
+                android:inputType="textPersonName"
+                android:singleLine="true" />
+
+            <EditText
+                android:id="@+id/studentInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="7dp"
+                android:autofillHints="@string/studentInfo"
+                android:ems="10"
+                android:hint="@string/studentInfo"
+                android:inputType="textMultiLine" />
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:id="@+id/added_hws_holder"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <Button
+                android:id="@+id/add_hw_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="7dp"
+                android:background="@android:color/transparent"
+                android:drawableStart="@drawable/green_add_24"
+                android:text="@string/add_hw"
+                android:textAlignment="viewStart"
+                android:textColor="#919191" />
+
+            <!--<LinearLayout
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="7dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/birthDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:autofillHints="date picker"
+                    android:gravity="fill"
+                    android:hint="@string/birthDateHint"
+                    android:textSize="18sp"
+                    tools:ignore="LabelFor,TextFields" />
+
+                <ImageButton
+                    android:id="@+id/showPicker"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:background="@android:color/transparent"
+                    android:contentDescription="@string/done_picking_date"
+                    android:padding="5dp"
+                    android:visibility="visible"
+                    app:srcCompat="@drawable/date_pick_24" />
+
+                <ImageButton
+                    android:id="@+id/savePickedDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:background="@android:color/transparent"
+                    android:contentDescription="@string/done_picking_date"
+                    android:padding="5dp"
+                    android:visibility="visible"
+                    app:srcCompat="@drawable/ic_baseline_save_24" />
+
+
+
+            </LinearLayout>
+
+            <DatePicker
+                android:id="@+id/birthDatePicker"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="7dp"
+                android:visibility="gone" />-->
+
+            <Button
+                android:id="@+id/saveButton2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="@string/save"
+                android:theme="@android:style/Animation" />
+        </LinearLayout>
+    </FrameLayout>
+</ScrollView>

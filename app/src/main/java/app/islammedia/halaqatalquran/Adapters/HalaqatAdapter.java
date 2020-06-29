@@ -1,4 +1,4 @@
-package app.islammedia.halaqatalquran;
+package app.islammedia.halaqatalquran.Adapters;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,13 +10,14 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
 
+import app.islammedia.halaqatalquran.R;
 import app.islammedia.halaqatalquran.database_room.Halaqa;
 
 public class HalaqatAdapter extends RecyclerView.Adapter<HalaqatAdapter.HViewHolder> {
 
     private List<Halaqa> halaqat;
 
-    HalaqatAdapter(List<Halaqa> halaqat){
+    public HalaqatAdapter(List<Halaqa> halaqat){
         this.halaqat = halaqat;
     }
 

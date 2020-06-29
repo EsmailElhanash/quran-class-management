@@ -7,7 +7,7 @@ import androidx.room.Room;
 import androidx.room.RoomDatabase;
 import androidx.room.TypeConverters;
 
-@Database(entities = {Student.class , Halaqa.class}, version = 1,exportSchema = false)
+@Database(entities = {Student.class , Halaqa.class}, version = 2,exportSchema = false)
 @TypeConverters({Converters.class})
 public abstract class MainDataBase extends RoomDatabase {
     public abstract MyDAO myDAO();

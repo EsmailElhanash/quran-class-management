@@ -1,4 +1,4 @@
-package app.islammedia.halaqatalquran;
+package app.islammedia.halaqatalquran.StHq_ViewEditAdd;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
@@ -10,27 +10,30 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+import app.islammedia.halaqatalquran.R;
 import app.islammedia.halaqatalquran.database_room.Halaqa;
 import app.islammedia.halaqatalquran.database_room.MainDataBase;
-import app.islammedia.halaqatalquran.database_room.Student;
 
-public class AddingStudentActivity extends AppCompatActivity {
+public class HalaqaActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_adding_student);
+        setContentView(R.layout.activity_halaqa);
+
         final MainDataBase db = Room.databaseBuilder(this,MainDataBase.class,"MainDataBase").build();
-        final EditText stName = findViewById(R.id.studentName);
-        final EditText stInfo = findViewById(R.id.studentInfo);
-        final EditText stHWS = findViewById(R.id.studentHWS);
-        Button saveB = findViewById(R.id.saveButton2);
-        saveB.setOnClickListener(new View.OnClickListener() {
+
+        final EditText halaqaName = findViewById(R.id.halaqaName);
+        final EditText halaqaTime = findViewById(R.id.halaqaTime);
+        final EditText halaqaInfo = findViewById(R.id.halaqaInfo);
+        Button save = findViewById(R.id.saveButton);
+
+        save.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (stName.getText().toString().equals("")){
-                    new AlertDialog.Builder(AddingStudentActivity.this)
-                            .setTitle(R.string.stNamePlease)
+                if (halaqaName.getText().toString().equals("")) {
+                    new AlertDialog.Builder(HalaqaActivity.this)
+                            .setTitle(R.string.namePlease)
                             .setNeutralButton(android.R.string.ok, new DialogInterface.OnClickListener() {
                                 @Override
                                 public void onClick(DialogInterface dialog, int which) {
@@ -38,11 +41,15 @@ public class AddingStudentActivity extends AppCompatActivity {
                                 }
                             }).create().show();
                 }else {
-                    db.myDAO().insertStudent(new Student(stName.getText().toString()
-                            ,stInfo.getText().toString()
-                            ,stHWS.getText().toString()));
+                    db.myDAO().insertHalaqa(new Halaqa(halaqaName.getText().toString()
+                            ,halaqaTime.getText().toString()
+                            ,halaqaInfo.getText().toString()));
                 }
             }
         });
+
     }
+
+
+
 }

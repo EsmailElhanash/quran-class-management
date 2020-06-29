@@ -15,6 +15,9 @@ public interface MyDAO {
     @Insert
     void insertStudent(Student... ss);
 
+    @Insert
+    void insertHomework(HomeWork... hws);
+
     @Query("SELECT * FROM Student")
     List<Student> getAllStudents();
 

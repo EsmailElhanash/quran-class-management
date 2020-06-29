@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name">الحلقات</string>
     <string name="addNewHalaqa">إضافة حلقة جديدة</string>
     <string name="halaqa_name">إسم الحلقة</string>
@@ -31,4 +31,19 @@
     <string name="studentInfo">معلومات إضافية</string>
     <string name="studentHWS">الواجبات الحالية</string>
     <string name="stNamePlease">يرجى إدخال إسم الحافظ</string>
+    <string name="birthdate">تاريخ الميلاد</string>
+    <string name="birthDateHint" >تحديد تاريخ الميلاد:</string>
+    <string name="done_picking_date">done picking date</string>
+    <string name="hw_start">البداية:</string>
+    <string name="hw_end">النهاية:</string>
+    <string name="add_hw">إضافة واجب</string>
+    <string name="hw_title">عنوان الواجب ، مثال: حفظ ، مراجعة ، ورد</string>
+    <string name="add_deadline_btn">+ آخرى</string>
+    <string name="date_not_set">لم يتم تحديد الموعد</string>
+    <string name="delete_date">إزالة الموعد</string>
+    <string name="delete">حذف</string>
+    <string name="after_week">+إسبوع</string>
+    <string name="after_day">+يوم</string>
+    <string name="yes">نعم</string>
+    <string name="cancel">إلغاء</string>
 </resources>
