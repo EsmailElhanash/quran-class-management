@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".StHq_ViewEditAdd.StudentActivity"
+    tools:context=".SecondaryActivities.StudentActivity"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent">
@@ -12,7 +12,7 @@
         android:layout_width="match_parent">
 
         <ProgressBar
-            android:id="@+id/st_add_progress_bar"
+            android:id="@+id/student_activity_progress_bar"
             style="?android:attr/progressBarStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -25,7 +25,7 @@
             android:orientation="vertical">
 
             <androidx.appcompat.widget.Toolbar
-                android:id="@+id/addStToolbar"
+                android:id="@+id/student_activity_toolbar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@android:color/holo_blue_light"
@@ -34,6 +34,8 @@
                 app:titleTextColor="@android:color/white" />
 
             <EditText
+                android:padding="5dp"
+                android:background="@drawable/bg1"
                 android:id="@+id/studentName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -46,6 +48,8 @@
                 android:singleLine="true" />
 
             <EditText
+                android:padding="5dp"
+                android:background="@drawable/bg1"
                 android:id="@+id/studentInfo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -54,6 +58,16 @@
                 android:ems="10"
                 android:hint="@string/studentInfo"
                 android:inputType="textMultiLine" />
+
+            <TextView
+                android:textColor="@android:color/holo_blue_dark"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_margin="7dp"
+                android:padding="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/alwagebat_text" />
 
             <LinearLayout
                 android:orientation="vertical"

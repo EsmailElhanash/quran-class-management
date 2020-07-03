@@ -1,4 +1,4 @@
-package app.islammedia.halaqatalquran.MainVP2Fragments;
+package app.islammedia.halaqatalquran.Fragments;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -15,8 +15,8 @@ import java.util.List;
 
 import app.islammedia.halaqatalquran.Adapters.HalaqatAdapter;
 import app.islammedia.halaqatalquran.R;
-import app.islammedia.halaqatalquran.database_room.Halaqa;
-import app.islammedia.halaqatalquran.database_room.MainDataBase;
+import app.islammedia.halaqatalquran.Database.Halaqa;
+import app.islammedia.halaqatalquran.Database.MainDataBase;
 
 
 /**

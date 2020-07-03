@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainVP2Fragments.HalaqatViewFragment">
+    tools:context=".Fragments.HalaqatViewFragment">
 
     <ProgressBar
         android:id="@+id/fhv_progressbar"

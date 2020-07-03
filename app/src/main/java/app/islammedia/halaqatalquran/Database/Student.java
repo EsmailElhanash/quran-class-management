@@ -1,33 +1,40 @@
-package app.islammedia.halaqatalquran.database_room;
+package app.islammedia.halaqatalquran.Database;
 
+import androidx.annotation.NonNull;
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
-
 @Entity
 public class Student {
-    @PrimaryKey(autoGenerate = true)
-    private int sid;
-
-    public int getSid() {
-        return sid;
+    @NonNull
+    public String getIdName() {
+        return idName;
     }
 
-    @ColumnInfo(name = "name")
+    public void setIdName(@NonNull String idName) {
+        this.idName = idName;
+    }
+
+    @ColumnInfo(name = "idName") @PrimaryKey @NonNull
+    private String idName;
+
+    @ColumnInfo(name = "name") @NonNull
     private String name;
 
     @ColumnInfo(name = "moreInfo")
     private String info;
 
+
+
+
+
+    @NonNull
     public String getName() {
         return name;
     }
 
-    public void setName(String name) {
+    public void setName(@NonNull String name) {
         this.name = name;
     }
 
@@ -47,22 +54,16 @@ public class Student {
         this.halaqaID = halaqaID;
     }
 
-    public List<HomeWork> getHws() {
-        return hws;
-    }
-
-    public void setHws(List<HomeWork> hws) {
-        this.hws = hws;
-    }
-
     @ColumnInfo(name = "hisHalaqa")
     private int halaqaID;
 
-    @ColumnInfo(name = "HWS")
-    private List<HomeWork> hws = new ArrayList<>();
 
-    public Student(String name, String info) {
+
+    public Student(@NonNull String name, String info, @NonNull String idName) {
         this.name = name;
         this.info = info;
+
+        this.idName = idName;
+    /*;*/
     }
 }

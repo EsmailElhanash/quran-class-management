@@ -96,6 +96,7 @@
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/hw_date_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
@@ -142,8 +143,8 @@
                     android:textSize="14sp" />
 
                 <Button
-                    style="?android:attr/buttonBarButtonStyle"
                     android:id="@+id/add_deadline"
+                    style="?android:attr/buttonBarButtonStyle"
                     android:layout_width="wrap_content"
                     android:layout_height="30dp"
                     android:layout_weight="1"

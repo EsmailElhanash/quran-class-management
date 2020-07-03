@@ -1,8 +1,9 @@
-package app.islammedia.halaqatalquran.MainVP2Fragments;
+package app.islammedia.halaqatalquran.Fragments;
 
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.room.Room;
@@ -15,8 +16,8 @@ import java.util.List;
 
 import app.islammedia.halaqatalquran.Adapters.StudentsAdapter;
 import app.islammedia.halaqatalquran.R;
-import app.islammedia.halaqatalquran.database_room.MainDataBase;
-import app.islammedia.halaqatalquran.database_room.Student;
+import app.islammedia.halaqatalquran.Database.MainDataBase;
+import app.islammedia.halaqatalquran.Database.Student;
 
 
 /**
@@ -45,9 +46,10 @@ public class StudentsViewFragment extends Fragment {
         if (getActivity()==null) return;
         MainDataBase db = Room.databaseBuilder(getActivity(),MainDataBase.class,"MainDataBase").build();
         List<Student> sts = db.myDAO().getAllStudents();
-        StudentsAdapter stAdapter = new StudentsAdapter(sts);
-        getActivity().runOnUiThread(()->
-            stRv.setAdapter(stAdapter)
-        );
+        StudentsAdapter stAdapter = new StudentsAdapter(sts,getActivity());
+        getActivity().runOnUiThread(()-> {
+            stRv.addItemDecoration(new DividerItemDecoration(getActivity(), DividerItemDecoration.VERTICAL));
+            stRv.setAdapter(stAdapter);
+        });
     };
 }

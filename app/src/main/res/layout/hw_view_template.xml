@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="4dp"
+    android:background="@drawable/bg1"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layoutDirection="rtl"
+    android:orientation="vertical">
+
+    <TextView
+        android:textStyle="bold|italic"
+        android:padding="3dp"
+        android:textSize="22sp"
+        android:id="@+id/hw_title"
+        android:text="@string/hw_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="3dp"
+        android:textAlignment="viewStart"
+        tools:ignore="LabelFor" />
+
+    <TextView
+        android:id="@+id/hw_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="3dp"
+        android:textSize="16sp"
+        android:text="@string/hw_desc" />
+
+    <TextView
+        android:padding="3dp"
+        android:textSize="16sp"
+        android:id="@+id/deadline_date_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="@string/date_not_set" />
+
+</LinearLayout>

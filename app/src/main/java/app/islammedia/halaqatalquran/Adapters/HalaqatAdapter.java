@@ -11,7 +11,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.List;
 
 import app.islammedia.halaqatalquran.R;
-import app.islammedia.halaqatalquran.database_room.Halaqa;
+import app.islammedia.halaqatalquran.Database.Halaqa;
 
 public class HalaqatAdapter extends RecyclerView.Adapter<HalaqatAdapter.HViewHolder> {
 

@@ -1,4 +1,4 @@
-package app.islammedia.halaqatalquran.StHq_ViewEditAdd;
+package app.islammedia.halaqatalquran.SecondaryActivities;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
@@ -11,8 +11,8 @@ import android.widget.Button;
 import android.widget.EditText;
 
 import app.islammedia.halaqatalquran.R;
-import app.islammedia.halaqatalquran.database_room.Halaqa;
-import app.islammedia.halaqatalquran.database_room.MainDataBase;
+import app.islammedia.halaqatalquran.Database.Halaqa;
+import app.islammedia.halaqatalquran.Database.MainDataBase;
 
 public class HalaqaActivity extends AppCompatActivity {
 

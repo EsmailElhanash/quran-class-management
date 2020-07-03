@@ -25,8 +25,10 @@
     <string name="moreInfo">معلومات اضافية</string>
     <string name="save">حفظ</string>
     <string name="namePlease">يرجى ادخال اسم الحلقة</string>
-    <string name="add_student">إضافة حافظ</string>
-    <string name="add_halaqa">إضافة حلقة</string>
+    <string name="add_student">إضافة حافظ جديد</string>
+    <string name="view_student">بيانات الحافظ</string>
+    <string name="edit_student_title">تعديل بيانات الحافظ</string>
+    <string name="add_halaqa">إضافة حلقة جديدة</string>
     <string name="studentName">الإسم</string>
     <string name="studentInfo">معلومات إضافية</string>
     <string name="studentHWS">الواجبات الحالية</string>
@@ -46,4 +48,8 @@
     <string name="after_day">+يوم</string>
     <string name="yes">نعم</string>
     <string name="cancel">إلغاء</string>
+    <string name="edit_student">editStudent</string>
+    <string name="hw_desc">وصف الواجب</string>
+    <string name="confirmDeleteStudent">هل أنت متأكد من حذف هذا الطالب؟</string>
+    <string name="alwagebat_text">الواجبات:</string>
 </resources>

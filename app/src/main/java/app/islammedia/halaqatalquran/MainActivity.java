@@ -12,16 +12,20 @@ import androidx.appcompat.widget.PopupMenu;
 import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
+import androidx.room.Room;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
 import androidx.viewpager2.widget.ViewPager2;
 
 import com.google.android.material.tabs.TabLayout;
 import com.google.android.material.tabs.TabLayoutMediator;
 
-import app.islammedia.halaqatalquran.StHq_ViewEditAdd.HalaqaActivity;
-import app.islammedia.halaqatalquran.StHq_ViewEditAdd.StudentActivity;
-import app.islammedia.halaqatalquran.MainVP2Fragments.HalaqatViewFragment;
-import app.islammedia.halaqatalquran.MainVP2Fragments.StudentsViewFragment;
+import app.islammedia.halaqatalquran.Database.MainDataBase;
+import app.islammedia.halaqatalquran.Database.Student;
+import app.islammedia.halaqatalquran.Database.StudentsAndHomeWorksCrossRef;
+import app.islammedia.halaqatalquran.SecondaryActivities.HalaqaActivity;
+import app.islammedia.halaqatalquran.SecondaryActivities.StudentActivity;
+import app.islammedia.halaqatalquran.Fragments.HalaqatViewFragment;
+import app.islammedia.halaqatalquran.Fragments.StudentsViewFragment;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -54,6 +58,18 @@ public class MainActivity extends AppCompatActivity {
         new TabLayoutMediator(vp2_tabs, vp2,
                 (tab, position) -> tab.setText(position==0 ? "الحلقات" : "الحُفَّاظ")
         ).attach();
+
+        /*MainDataBase db = Room.databaseBuilder(this, MainDataBase.class,"MainDataBase").build();
+
+            Runnable r = () -> {
+                for (int i=0;i<10;i++) {
+                    db.myDAO().insertStudent(new Student(
+                            "" + i, i + "" + i, i + "" + i + i + "" + i
+                    ));
+                }
+            };
+            new Thread(r).start();*/
+
 
 
     }
