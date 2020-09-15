@@ -1,51 +1,167 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ImageView
+        android:alpha="0.1"
+        android:tint="@color/my_light_blue"
+        android:src="@drawable/quran_bg_150"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="@string/background" />
+
+
+    <ScrollView
+    tools:context=".secondary_activities.HalaqaActivity"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".SecondaryActivities.HalaqaActivity"
-    android:layoutDirection="rtl">
+    android:layout_width="match_parent" android:layout_height="match_parent">
 
-    <EditText
-        android:id="@+id/halaqaName"
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="7dp"
-        android:ems="10"
-        android:hint="@string/write_halaqa_name"
-        android:inputType="text"
-        android:singleLine="true"
-        android:importantForAutofill="no"/>
+        android:layout_height="wrap_content">
 
-    <EditText
-        android:id="@+id/halaqaTime"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="7dp"
-        android:ems="10"
-        android:hint="@string/halaqaTimes"
-        android:inputType="textMultiLine"
-        android:importantForAutofill="no"/>
+        <ProgressBar
+            android:visibility="gone"
+            android:id="@+id/halaqaActionProgressBar"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layoutDirection="rtl">
+
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/mainToolbar"
+                    android:theme="@style/toolbar_style"
+                    android:background="@android:color/holo_blue_light"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:titleTextColor="@android:color/white"
+                    android:minHeight="?attr/actionBarSize" />
+
+                <EditText
+                    android:id="@+id/halaqaNameEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="7dp"
+                    android:ems="10"
+                    android:hint="@string/write_halaqa_name"
+                    android:inputType="text"
+                    android:singleLine="true"
+                    android:importantForAutofill="no"/>
 
 
-    <EditText
-        android:id="@+id/halaqaInfo"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="7dp"
-        android:ems="10"
-        android:hint="@string/moreInfo"
-        android:inputType="textMultiLine"
+                <EditText
+                    android:id="@+id/halaqaInfo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="7dp"
+                    android:ems="10"
+                    android:hint="@string/moreInfo"
+                    android:inputType="textMultiLine"
 
-        android:importantForAutofill="no"/>
+                    android:importantForAutofill="no"/>
 
-    <Button
-        android:id="@+id/saveButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:text="@string/save" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="7dp"
+                    android:padding="5dp"
+                    android:text="@string/halaqa_dates_text"
+                    android:textColor="@android:color/holo_blue_dark"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
 
-</LinearLayout>
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:id="@+id/halaqa_dates_holder"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <Button
+                    android:id="@+id/add_halaqa_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="7dp"
+                    android:background="@android:color/transparent"
+                    android:drawableStart="@drawable/green_add_24"
+                    android:text="@string/add_halaqa_date"
+                    android:textAlignment="viewStart"
+                    android:textColor="#919191" />
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="7dp"
+                    android:padding="5dp"
+                    android:text="@string/alwagebat_text"
+                    android:textColor="@android:color/holo_blue_dark"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:id="@+id/halaqa_home_works_holder"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <Button
+                    android:id="@+id/add_halaqa_homework"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="7dp"
+                    android:background="@android:color/transparent"
+                    android:drawableStart="@drawable/green_add_24"
+                    android:text="@string/add_hw"
+                    android:textAlignment="viewStart"
+                    android:textColor="#919191" />
+
+                <TextView
+                    android:id="@+id/studentsViewOfHalaqa"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="7dp"
+                    android:padding="5dp"
+                    android:text="@string/students"
+                    android:textColor="@android:color/holo_blue_dark"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+
+                <FrameLayout
+                    android:layout_margin="8dp"
+                    android:orientation="vertical"
+                    android:id="@+id/studentsHolder"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <Button
+                    android:id="@+id/add_halaqa_students"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="7dp"
+                    android:background="@android:color/transparent"
+                    android:drawableStart="@drawable/green_add_24"
+                    android:text="@string/add_students_to_halaqa"
+                    android:textAlignment="viewStart"
+                    android:textColor="#919191" />
+
+
+                <Button
+                    android:id="@+id/saveButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="@string/save" />
+
+            </LinearLayout>
+
+        </FrameLayout>
+    </ScrollView>
+</FrameLayout>

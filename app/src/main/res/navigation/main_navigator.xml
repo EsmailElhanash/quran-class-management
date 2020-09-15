@@ -12,12 +12,12 @@
         tools:layout="@layout/activity_main" />
     <activity
         android:id="@+id/addingStudentActivity"
-        android:name="app.islammedia.halaqatalquran.SecondaryActivities.StudentActivity"
+        android:name="app.islammedia.halaqatalquran.secondary_activities.StudentActivity"
         android:label="activity_adding_student"
         tools:layout="@layout/activity_student" />
     <activity
         android:id="@+id/addingHalaqaActivity"
-        android:name="app.islammedia.halaqatalquran.SecondaryActivities.HalaqaActivity"
+        android:name="app.islammedia.halaqatalquran.secondary_activities.HalaqaActivity"
         android:label="activity_adding_halaqa"
         tools:layout="@layout/activity_halaqa" />
 </navigation>

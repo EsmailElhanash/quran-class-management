@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    android:layoutDirection="rtl">
+
+    <TextView
+        android:layout_weight="1"
+        android:padding="5dp"
+        android:textAlignment="viewStart"
+        android:layout_margin="5dp"
+        android:textSize="28sp"
+        android:text="@string/studentName"
+        android:id="@+id/studentNameTV"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"/>
+
+    <ImageButton
+        android:id="@+id/editThisStudent"
+        android:layout_margin="5dp"
+        android:background="@android:color/transparent"
+        app:srcCompat="@drawable/edit_24"
+        android:layout_height="match_parent"
+        android:layout_width="wrap_content"
+        android:contentDescription="@string/edit_student" />
+
+    <ImageButton
+        android:id="@+id/deleteThisStudent"
+        android:layout_margin="5dp"
+        android:background="@android:color/transparent"
+        app:srcCompat="@drawable/delete_24"
+        android:layout_height="match_parent"
+        android:layout_width="wrap_content"
+        android:contentDescription="@string/edit_student" />
+
+    <ProgressBar
+        android:visibility="gone"
+        android:id="@+id/studentDeleting"
+        android:layout_margin="5dp"
+        android:background="@android:color/transparent"
+        android:layout_height="match_parent"
+        android:layout_width="24dp"
+        android:contentDescription="@string/edit_student" />
+
+</LinearLayout>
