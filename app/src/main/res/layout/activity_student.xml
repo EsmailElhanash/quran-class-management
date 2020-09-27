@@ -1,111 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout android:layout_height="match_parent"
+<FrameLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="match_parent"
     android:layout_width="match_parent"
+    android:layoutDirection="rtl"
     xmlns:android="http://schemas.android.com/apk/res/android">
 
     <ImageView
         android:alpha="0.1"
-        android:tint="@color/my_light_blue"
         android:src="@drawable/quran_bg_150"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:contentDescription="@string/background" />
+        android:contentDescription="@string/background"
+        app:tint="@color/my_light_blue" />
 
 
     <ScrollView android:layout_height="match_parent"
         xmlns:tools="http://schemas.android.com/tools"
-        tools:context=".secondary_activities.StudentActivity"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
+        tools:context=".student.StudentActivity"
         android:layout_width="match_parent">
 
         <FrameLayout
-            android:layoutDirection="rtl"
+            android:id="@+id/fragment_holder"
             android:layout_height="wrap_content"
             android:layout_width="match_parent">
-
-            <ProgressBar
-                android:id="@+id/student_activity_progress_bar"
-                style="?android:attr/progressBarStyle"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:visibility="gone" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical">
-
-                <androidx.appcompat.widget.Toolbar
-                    android:id="@+id/student_activity_toolbar"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@android:color/holo_blue_light"
-                    android:minHeight="?attr/actionBarSize"
-                    android:theme="@style/toolbar_style"
-                    app:titleTextColor="@android:color/white" />
-
-                <EditText
-                    android:padding="5dp"
-                    android:background="@drawable/bg1"
-                    android:id="@+id/studentName"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="7dp"
-                    android:autofillHints="@string/studentName"
-                    android:ems="10"
-
-                    android:hint="@string/studentName"
-                    android:inputType="textPersonName"
-                    android:singleLine="true" />
-
-                <EditText
-                    android:padding="5dp"
-                    android:background="@drawable/bg1"
-                    android:id="@+id/studentInfo"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="7dp"
-                    android:autofillHints="@string/studentInfo"
-                    android:ems="10"
-                    android:hint="@string/studentInfo"
-                    android:inputType="textMultiLine" />
-
-                <TextView
-                    android:textColor="@android:color/holo_blue_dark"
-                    android:textSize="20sp"
-                    android:textStyle="bold"
-                    android:layout_margin="7dp"
-                    android:padding="5dp"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/alwagebat_text" />
-
-                <LinearLayout
-                    android:orientation="vertical"
-                    android:id="@+id/added_hws_holder"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"/>
-
-                <Button
-                    android:id="@+id/add_hw_btn"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="7dp"
-                    android:background="@android:color/transparent"
-                    android:drawableStart="@drawable/green_add_24"
-                    android:text="@string/add_hw"
-                    android:textAlignment="viewStart"
-                    android:textColor="#919191" />
-
-                <Button
-                    android:id="@+id/saveButton2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:text="@string/save"
-                    android:theme="@android:style/Animation" />
-            </LinearLayout>
         </FrameLayout>
     </ScrollView>
 </FrameLayout>

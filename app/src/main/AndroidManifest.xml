@@ -10,8 +10,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".SecondaryActivities.StudentActivity" />
-        <activity android:name=".SecondaryActivities.HalaqaActivity" />
+        <activity android:name=".student.StudentActivity" />
+        <activity android:name=".halaqa.HalaqaActivity" />
         <activity
             android:name=".MainActivity"
             android:icon="@mipmap/ic_launcher"

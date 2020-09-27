@@ -1,41 +1,18 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name">الحلقات</string>
-    <string name="addNewHalaqa">إضافة حلقة جديدة</string>
-    <string name="halaqa_name">إسم الحلقة</string>
-    <string name="saturday_arabic">السبت</string>
-    <string name="sunday_arabic">الأحد</string>
-    <string name="am_vs_pm">ص</string>
-    <string name="double_zeros">٠٠</string>
-    <string name="one_space" />
-    <string name="space_colon_space">:</string>
-    <string name="pick_date">أو حدد وقت
-    </string>
     <string name="write_halaqa_name">أكتب إسم الحلقة</string>
-    <string name="monday_arabic">الإثنين</string>
-    <string name="tuesday_arabic">الثلاثاء</string>
-    <string name="wednesday_arabic">الأربعاء</string>
-    <string name="thursday_arabic">الخميس</string>
-    <string name="friday_arabic">الجمعة</string>
     <string name="add_new">إضافة عنصر جديد</string>
 
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="halaqa_repeats">رقم</string>
-    <string name="halaqaTimes">مواعيد الحلقة</string>
     <string name="moreInfo">معلومات اضافية</string>
     <string name="save">حفظ</string>
-    <string name="namePlease">يرجى ادخال اسم الحلقة</string>
     <string name="add_student">إضافة حافظ جديد</string>
     <string name="view_student">بيانات الحافظ</string>
     <string name="edit_student_title">تعديل بيانات الحافظ</string>
     <string name="add_halaqa">إضافة حلقة جديدة</string>
     <string name="studentName">الإسم</string>
     <string name="studentInfo">معلومات إضافية</string>
-    <string name="studentHWS">الواجبات الحالية</string>
     <string name="stNamePlease">يرجى إدخال إسم الحافظ</string>
-    <string name="birthdate">تاريخ الميلاد</string>
-    <string name="birthDateHint" >تحديد تاريخ الميلاد:</string>
-    <string name="done_picking_date">done picking date</string>
     <string name="hw_start">البداية:</string>
     <string name="hw_end">النهاية:</string>
     <string name="add_hw">إضافة واجب</string>
@@ -52,7 +29,6 @@
     <string name="hw_desc">:وصف الواجب</string>
     <string name="confirmDeleteStudent">هل أنت متأكد من حذف هذا الطالب؟</string>
     <string name="alwagebat_text">الواجبات:</string>
-    <string name="logo">LOGO</string>
     <string name="add_halaqa_date">إضافة موعد للحلقة</string>
     <string name="rep">التكرار:</string>
     <string name="daily">يومي</string>
@@ -60,11 +36,8 @@
     <string name="monthly">شهري</string>
     <string name="other_rep">آخر</string>
     <string name="no_rep">بدون</string>
-    <string name="day">يوم</string>
     <string name="custom_rep_helping_text">تكرار كل</string>
     <string name="days_number">اكتب عدد الأيام (رقم)</string>
-    <string name="no">لا</string>
-    <string name="choose_time_question">هل تريد تحديد وقت في اليوم؟</string>
 
     <string name="mdtp_ok">موافق</string>
     <string name="mdtp_cancel">إلغاء</string>
@@ -80,7 +53,6 @@
     <string name="choose_students">اختر الطلبة:</string>
     <string name="edit_halaqa">تعديل الحلقة</string>
     <string name="add_deadline"> + إضافة موعد</string>
-    <string name="rating_hint">من 10</string>
     <string name="rating">التقييم:</string>
     <string name="_0_5">+0.5</string>
     <string name="__0_5">-0.5</string>
@@ -88,4 +60,6 @@
     <string name="background">background</string>
     <string name="navigation_drawer_open">عرض</string>
     <string name="navigation_drawer_close">إغلاق</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
