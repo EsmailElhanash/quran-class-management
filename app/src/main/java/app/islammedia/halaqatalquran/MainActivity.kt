@@ -6,14 +6,11 @@ import android.view.Menu
 import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
-import androidx.fragment.app.Fragment
-import androidx.fragment.app.FragmentActivity
-import androidx.viewpager2.adapter.FragmentStateAdapter
+import androidx.fragment.app.add
+import androidx.fragment.app.commit
 import androidx.viewpager2.widget.ViewPager2
-import app.islammedia.halaqatalquran.fragments.HalaqatViewFragment
-import app.islammedia.halaqatalquran.fragments.StudentsViewFragment
 import app.islammedia.halaqatalquran.halaqa.HalaqaActivity
-import app.islammedia.halaqatalquran.student.StudentActivity
+import app.islammedia.halaqatalquran.student.ui.StudentActivity
 import app.islammedia.halaqatalquran.utils.Constants
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
@@ -38,15 +35,19 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         setUpToolbar()
+        setUpViewPager()
+
+
+    }
+
+    private fun setUpViewPager(){
         val viewPager = findViewById<ViewPager2>(R.id.st_hq_vp2)
         val viewPagerTabsLayout = findViewById<TabLayout>(R.id.vp2_tabs)
 
-        viewPager.adapter = ViewPager2Slider(this)
+        viewPager.adapter =  ViewPager2Slider(this)
         TabLayoutMediator(viewPagerTabsLayout, viewPager
         ) { tab: TabLayout.Tab?, position: Int ->
-            if (tab != null) {
-                tab.text = if (position == 0) "الحلقات" else "الحُفَّاظ"
-            }
+            tab?.text = if (position == 0) "الحلقات" else if (position == 1) "الحُفَّاظ" else null
         }.attach()
     }
 
@@ -69,21 +70,7 @@ class MainActivity : AppCompatActivity() {
         startActivity(i)
     }
 
-    private class ViewPager2Slider(fa: FragmentActivity) : FragmentStateAdapter(fa) {
-        companion object {
-            private const val NUMBER_OF_PAGES = 2
-        }
 
-        override fun createFragment(position: Int): Fragment {
-            return if (position == 1) {
-                StudentsViewFragment()
-            } else HalaqatViewFragment()
-        }
-
-        override fun getItemCount(): Int {
-            return NUMBER_OF_PAGES
-        }
-    }
 
 
 }

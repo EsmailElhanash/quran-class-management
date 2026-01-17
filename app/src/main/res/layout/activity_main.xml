@@ -34,30 +34,10 @@
                 android:minHeight="?attr/actionBarSize"
                 app:logo="@drawable/ic_logo" />
 
-            <androidx.coordinatorlayout.widget.CoordinatorLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <LinearLayout
+                <FrameLayout
+                    android:id="@+id/activeFragmentHolder"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical">
-
-                    <com.google.android.material.tabs.TabLayout
-                        app:tabTextAppearance="@style/CustomTabText"
-                        android:id="@+id/vp2_tabs"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content" />
-
-                    <androidx.viewpager2.widget.ViewPager2
-                        android:id="@+id/st_hq_vp2"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent" />
-
-                </LinearLayout>
-
-            </androidx.coordinatorlayout.widget.CoordinatorLayout>
-
+                    android:layout_height="match_parent"/>
 
         </LinearLayout>
 

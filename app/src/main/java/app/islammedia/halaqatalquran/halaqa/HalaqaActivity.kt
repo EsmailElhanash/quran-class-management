@@ -18,7 +18,7 @@ import app.islammedia.halaqatalquran.helping_classes.HalaqaHomeworkClass
 import app.islammedia.halaqatalquran.helping_classes.HalaqaStudentsHelper
 import app.islammedia.halaqatalquran.MainActivity
 import app.islammedia.halaqatalquran.R
-import app.islammedia.halaqatalquran.student.StudentActivity
+import app.islammedia.halaqatalquran.student.ui.StudentActivity
 import java.util.*
 
 class HalaqaActivity : AppCompatActivity() {
@@ -314,7 +314,7 @@ class HalaqaActivity : AppCompatActivity() {
             val checkedStudents = db.myDAO().getHalaqaStudents(halaqaID)
             val studentBooleanMap: MutableMap<Student?, Boolean?> = HashMap()
             for (i in students.indices) {
-                if (checkedStudents.contains(students[i].idName)) studentBooleanMap[students[i]] = true else studentBooleanMap[students[i]] = false
+                studentBooleanMap[students[i]] = checkedStudents.contains(students[i].idName)
             }
             runOnUiThread { halaqaStudentsHelper = HalaqaStudentsHelper(studentsHolder, studentBooleanMap, 0, this) }
         }

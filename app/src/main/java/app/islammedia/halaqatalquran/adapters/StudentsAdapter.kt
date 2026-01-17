@@ -15,7 +15,7 @@ import androidx.room.Room
 import app.islammedia.halaqatalquran.database.entities.Student
 import app.islammedia.halaqatalquran.database.MainDataBase
 import app.islammedia.halaqatalquran.R
-import app.islammedia.halaqatalquran.student.StudentActivity
+import app.islammedia.halaqatalquran.student.ui.StudentActivity
 
 class StudentsAdapter(private val students: MutableList<Student?>?, private val a: Activity) : RecyclerView.Adapter<StudentsAdapter.HViewHolder>() {
     var db: MainDataBase = Room.databaseBuilder(a, MainDataBase::class.java, "MainDataBase").build()

@@ -36,7 +36,7 @@ class MainDataBaseManager private constructor(){
                     "hn$i", "hi$i", null , "hid$i"))
             }
         }
-        Thread(r).start();
+        Thread(r).start()
     }
 
 }

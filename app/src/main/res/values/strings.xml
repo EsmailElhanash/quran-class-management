@@ -1,14 +1,12 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name">الحلقات</string>
     <string name="write_halaqa_name">أكتب إسم الحلقة</string>
-    <string name="add_new">إضافة عنصر جديد</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="moreInfo">معلومات اضافية</string>
     <string name="save">حفظ</string>
     <string name="add_student">إضافة حافظ جديد</string>
     <string name="view_student">بيانات الحافظ</string>
-    <string name="edit_student_title">تعديل بيانات الحافظ</string>
     <string name="add_halaqa">إضافة حلقة جديدة</string>
     <string name="studentName">الإسم</string>
     <string name="studentInfo">معلومات إضافية</string>
@@ -39,27 +37,20 @@
     <string name="custom_rep_helping_text">تكرار كل</string>
     <string name="days_number">اكتب عدد الأيام (رقم)</string>
 
-    <string name="mdtp_ok">موافق</string>
-    <string name="mdtp_cancel">إلغاء</string>
     <string name="next_halaqa">+الحلقة التالية</string>
     <string name="add_date">إضافة او تغيير الموعد</string>
     <string name="halaqaNamePlease">يرجى إدخال إسم الحلقة</string>
     <string name="view_halaqa">عن الحلقة</string>
-    <string name="clear_date">إزالة الموعد</string>
     <string name="halaqa_dates_text">مواعيد الحلقة:</string>
     <string name="confirmDeleteHalaqa">هل أنت متأكد من حذف هذا الحلقة؟</string>
     <string name="students">الطلبة:</string>
     <string name="add_students_to_halaqa">إضافة طلبة إلى الحلقة</string>
     <string name="choose_students">اختر الطلبة:</string>
     <string name="edit_halaqa">تعديل الحلقة</string>
-    <string name="add_deadline"> + إضافة موعد</string>
     <string name="rating">التقييم:</string>
     <string name="_0_5">+0.5</string>
     <string name="__0_5">-0.5</string>
     <string name="zero">0.0</string>
     <string name="background">background</string>
-    <string name="navigation_drawer_open">عرض</string>
-    <string name="navigation_drawer_close">إغلاق</string>
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
