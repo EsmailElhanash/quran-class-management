@@ -1,4 +1,4 @@
-# Halaqat Al Quran
+# Halaqat Al Quran / Quran Class Manager
 
 Android app to manage Quran classes (halaqat), students, and homework tracking.
 
